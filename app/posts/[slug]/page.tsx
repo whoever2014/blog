@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import { getPostBySlug, getPostSlugs } from "@/lib/mdx";
 import { AUTHOR, BASE_URL, SITE_NAME } from "@/lib/config";
+import { Comments } from "@/components/comments";
 import type { Metadata } from "next";
 
 interface PostPageProps {
@@ -100,7 +101,12 @@ export default async function PostPage({ params }: PostPageProps) {
         />
       </article>
 
-      <div className="mt-16 border-t border-border pt-8">
+      <section className="mt-16 border-t border-border pt-8">
+        <h2 className="mb-6 text-lg font-semibold">留言</h2>
+        <Comments />
+      </section>
+
+      <div className="mt-12 border-t border-border pt-8">
         <Link
           href="/"
           className="text-sm text-muted-foreground no-underline hover:text-foreground"
