@@ -1,4 +1,4 @@
-# 随笔
+# Qilin's Blog
 
 A high-performance, minimalist personal tech blog built with modern web technologies.
 
