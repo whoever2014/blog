@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME } from "@/lib/config";
+import { GAME_URL, SITE_NAME } from "@/lib/config";
 
 export function Navbar() {
   return (
@@ -11,13 +11,21 @@ export function Navbar() {
         >
           {SITE_NAME}
         </Link>
-        <nav className="text-sm">
+        <nav className="flex gap-4 text-sm">
           <Link
             href="/"
             className="text-muted-foreground no-underline hover:text-foreground hover:no-underline"
           >
             首页
           </Link>
+          <a
+            href={GAME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground no-underline hover:text-foreground hover:no-underline"
+          >
+            魔塔
+          </a>
         </nav>
       </div>
     </header>

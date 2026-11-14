@@ -4,6 +4,9 @@
 export const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
+// 魔塔游戏：同一个 GitHub Pages 域名下的另一个仓库（magic_tower），由博客网址推出
+export const GAME_URL = new URL("/magic_tower/", BASE_URL).toString();
+
 export const SITE_NAME = "Qilin's Blog";
 export const SITE_DESCRIPTION = "Qilin 的个人博客";
 export const AUTHOR = "Qilin";
